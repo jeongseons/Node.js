@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- title : value -->
+    <h1>{{title}}</h1>
+
+    <!-- 내부 변수 선언 -->
+    {%set node = 'node.js'%} {%set js = 'node'%}
+    <h3>{{node}}</h3>
+    <h3>{{js}}</h3>
+
+    <!-- 조건문 -->
+    {% if js == 'node'%}
+    <p>node입니다</p>
+    {% elif js === 'java'%}
+    <p>java입니다</p>
+    {% else %}
+    <p>js입니다</p>
+    {% endif %}
+
+    <!-- 반복문 -->
+    {%set fruits = ['사과','배','오렌지']%}
+    <table border="1">
+      <tr>
+        {%for item in fruits%}
+        <td>{{loop.index}}. {{item}}</td>
+        {%endfor%}
+      </tr>
+    </table>
+  </body>
+</html>
