@@ -19,6 +19,7 @@ router.get("/setcookie", (req, res) => {
 //쿠키 확인하기
 router.get("/getcookies", (req, res) => {
   console.log(req.cookies);
+  console.log(req.cookies.dinner);
   res.send(req.cookies);
 });
 
