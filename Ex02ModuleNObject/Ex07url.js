@@ -18,7 +18,7 @@ myURL.searchParams.append("key", "value1");
 myURL.searchParams.append("key", "value2");
 console.log(myURL.searchParams.getAll("key"));
 //colors=red,blue,orange
-//getAll() : 값이 여러 개일 겨웅 전부 가져오기
+//getAll() : 값이 여러 개일 경우 전부 가져오기
 
 myURL.searchParams.set("key", "value3");
 console.log(myURL.searchParams.getAll("key"));
